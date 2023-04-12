@@ -1,7 +1,6 @@
 class ProductManager{
     constructor(){
         this.products = []
-
     }
     getProducts(){
         console.log(this.products)
@@ -15,7 +14,6 @@ class ProductManager{
         }
         console.log('not found')
         return null 
-
     }
     addProduct({title,description,price,thumbnail,stock}){
         let id = 0
