@@ -1,0 +1,72 @@
+[
+  {
+    "title": "almendras",
+    "description": "frutos secos",
+    "price": 100,
+    "thumbnail": "/almendras.jpg",
+    "id": 1
+  },
+  {
+    "title": "avellanas",
+    "description": "frutos secos",
+    "price": 200,
+    "thumbnail": "/avellanas.jpg",
+    "id": 2
+  },
+  {
+    "title": "castañas de caju",
+    "description": "frutos secos",
+    "price": 300,
+    "thumbnail": "/castañasdecaju.jpg",
+    "id": 3
+  },
+  {
+    "title": "almendras chcolate blanco",
+    "description": "frutos secos",
+    "price": 1000,
+    "thumbnail": "/almendraschocolateblanco.jpg",
+    "id": 4
+  },
+  {
+    "title": "ciruelas sin carozo",
+    "description": "ciruelas",
+    "price": 1500,
+    "thumbnail": "/ciruelassincarozo.jpg",
+    "id": 5
+  },
+  {
+    "title": "garrapiñada de caju",
+    "description": "garrapiñada",
+    "price": 700,
+    "thumbnail": "/garrapiñadacaju",
+    "id": 6
+  },
+  {
+    "title": "higo negro",
+    "description": "higo",
+    "price": 1200,
+    "thumbnail": "/higonegro.jpg",
+    "id": 7
+  },
+  {
+    "title": "kiwi glaceado",
+    "description": "kiwi",
+    "price": 2000,
+    "thumbnail": "/kiwiglaceado.jpg",
+    "id": 8
+  },
+  {
+    "title": "banana disecada",
+    "description": "pistacho",
+    "price": 1600,
+    "thumbnail": "/pistacho.jpg",
+    "id": 9
+  },
+  {
+    "title": "nueces",
+    "description": "frutos secos",
+    "price": 500,
+    "thumbnail": "/nueces.jpg",
+    "id": 10
+  }
+]
