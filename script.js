@@ -1,4 +1,5 @@
-const fs= require('fs')
+//const fs= require('fs')
+import fs from 'fs'
 
 class ProductManager{
     constructor(path){
@@ -10,11 +11,11 @@ class ProductManager{
         let file = fs.existsSync(path)
         if (!file){
             fs.writeFileSync(path,'[]')
-                console.log('file created at path: ' +this.path)
+                //console.log('file created at path: ' +this.path)
                 return 'file created at path: ' +this.path
         }else{
             this.products = JSON.parse(fs.readFileSync(path, 'utf-8'))
-            console.log('data recovered')
+            //console.log('data recovered')
             return 'data recovered'
         }
     }
@@ -30,14 +31,14 @@ class ProductManager{
             this.products.push(data)    
             let data_json = JSON.stringify(this.products,null,2) 
             await fs.promises.writeFile(this.path,data_json)
-            console.log('id´s created product: ' +data.id)
+            //console.log('id´s created product: ' +data.id)
             return 'id´s product: '+data.id
         }catch (error){
             console.log(error)
             return 'addProduct: error'
         }
     }
-    async getProducts(){
+     getProducts(){
         try{
             if(this.products.length){
             return this.products
@@ -48,7 +49,7 @@ class ProductManager{
             return 'getProducts: error'
         }
     }
-    async getProductById(id){
+     getProductById(id){
         try{
             let one = this.products.find (each =>each.id===id)
             if(one){
@@ -72,7 +73,7 @@ class ProductManager{
                 }
                 let data_json = JSON.stringify(this.products,null,2)
                 await fs.promises.writeFile(this.path,data_json)
-                console.log('updated user: '+id)
+                //console.log('updated user: '+id)
                 return 'updated user: '+id
             }
         }catch(error) {
@@ -100,8 +101,8 @@ class ProductManager{
     }
 }
 
-async function manager(){
-    let manager = new ProductManager('./data/data.json')
+let manager = new ProductManager('./data/data.json')
+async function manage(){
     await manager.addProduct({title:'almendras',description: 'frutos secos',price:100,thumbnail: '/almendras.jpg'})
     await manager.addProduct({title:'avellanas',description: 'frutos secos',price:200,thumbnail: '/avellanas.jpg'})
     await manager.addProduct({title:'castañas de caju',description: 'frutos secos',price:300,thumbnail: '/castañasdecaju.jpg'})
@@ -119,4 +120,6 @@ async function manager(){
 
 }
 
-manager()
+//manage()
+
+export default manager
