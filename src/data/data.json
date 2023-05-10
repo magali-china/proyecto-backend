@@ -7,9 +7,9 @@
     "id": 1
   },
   {
-    "title": "avellanas",
+    "title": "platano",
     "description": "frutos secos",
-    "price": 200,
+    "price": 400,
     "thumbnail": "/avellanas.jpg",
     "id": 2
   },
@@ -26,13 +26,6 @@
     "price": 1000,
     "thumbnail": "/almendraschocolateblanco.jpg",
     "id": 4
-  },
-  {
-    "title": "ciruelas sin carozo",
-    "description": "ciruelas",
-    "price": 1500,
-    "thumbnail": "/ciruelassincarozo.jpg",
-    "id": 5
   },
   {
     "title": "garrapiñada de caju",
@@ -68,5 +61,26 @@
     "price": 500,
     "thumbnail": "/nueces.jpg",
     "id": 10
+  },
+  {
+    "title": "coco",
+    "description": "fruto",
+    "price": 500,
+    "thumbnail": [],
+    "id": 11
+  },
+  {
+    "title": "coco",
+    "description": "fruto",
+    "price": 500,
+    "thumbnail": [],
+    "id": 12
+  },
+  {
+    "title": "cacao",
+    "description": "fruto",
+    "price": 200,
+    "thumbnail": [],
+    "id": 13
   }
 ]
