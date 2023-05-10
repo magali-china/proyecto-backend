@@ -1,11 +1,11 @@
 import { Router } from "express";
-import manager from "../../managers/script.js";
+import cart from "../../managers/carts.js";
 
 const cart_router = Router()
 
 cart_router.get('/', async(req,res,next)=> {
     try {
-        let all = manager.getCarts()
+        let all = cart.getCarts()
         if (all.length>0) {
             return res.json({ status:200,all })
         }
@@ -17,8 +17,8 @@ cart_router.get('/', async(req,res,next)=> {
 })
 cart_router.get('/:id', async(req,res,next)=> {
     try {
-        let id = Number(req.params.pid)
-        let one = manager.getCart(id)
+        let id = Number(req.params.id)
+        let one = cart.getCartById(id)
         if (one) {
             return res.json({ status:200,one })
         }
@@ -30,7 +30,7 @@ cart_router.get('/:id', async(req,res,next)=> {
 })
 cart_router.post('/', async(req,res,next)=> {
     try {
-        let response = await manager.addCart(req.body)
+        let response = await cart.addCart(req.body)
         if (response===201) {
             return res.json({ status:201,message:'cart created'})
         }
@@ -39,11 +39,11 @@ cart_router.post('/', async(req,res,next)=> {
         next(error)
     }
 })
-cart_router.put('/:pid', async(req,res,next)=> {
+cart_router.put('/:id', async(req,res,next)=> {
     try {
-        let id = Number(req.params.pid)
+        let id = Number(req.params.id)
         let data = req.body
-        let response = await manager.updateCart(id,data)
+        let response = await cart.updateCarts(id,data)
         if (response===200) {
             return res.json({ status:200,message:'cart updated'})
         }
@@ -52,10 +52,10 @@ cart_router.put('/:pid', async(req,res,next)=> {
         next(error)
     }
 })
-cart_router.delete('/:pid', async(req,res,next)=> {
+cart_router.delete('/:id', async(req,res,next)=> {
     try {
-        let id = Number(req.params.pid)
-        let response = await manager.deleteCart(id)
+        let id = Number(req.params.id)
+        let response = await cart.deleteCart(id)
         if (response===200) {
             return res.json({ status:200,message:'cart deleted'})
         }

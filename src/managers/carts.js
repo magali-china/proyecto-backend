@@ -32,10 +32,10 @@ class CartManager{
             let data_json = JSON.stringify(this.carts,null,2) 
              await fs.promises.writeFile(this.path,data_json)
             //console.log('id´s created product: ' +data.id)
-            return 'id´s carts: '+data.id
+            return 201
         }catch (error){
             console.log(error)
-            return 'addCarts: error'
+            return 400
         }
             
     }
@@ -62,7 +62,40 @@ class CartManager{
             return 'getCartById: error'
         }
     }
+    async updateCarts(id,data){
+        try{
+            let one = await this.getCartById(id)
+            for (let prop in data){
+                //console.log(prop)
+                one[prop] = data[prop]
+            }
+            let data_json = JSON.stringify(this.carts,null,2)
+            await fs.promises.writeFile(this.path,data_json)
+            //console.log('updated user: '+id)
+            return 200
+        }catch{
+            console.log(error)
+            return null
+        }
+    }
+    async deleteCart(id){
+        try{
+            let search =  this.carts.find(each=>each.id===id)
+            if(search){
+                this.carts = this.carts.filter(each=>each.id!==id)
+                let data_json = JSON.stringify(this.carts,null,2)
+                await fs.promises.writeFile(this.path,data_json)
+                return 200
+            }else{
+                return null
+            }
+        }catch(error){
+            console.log(error)
+            return null
+        }
+    }
 }
+
 
 let cart = new CartManager('./src/data/cart.json')
 async function carts(){
