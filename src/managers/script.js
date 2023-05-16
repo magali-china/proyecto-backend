@@ -32,7 +32,7 @@ class ProductManager{
             let data_json = JSON.stringify(this.products,null,2) 
             await fs.promises.writeFile(this.path,data_json)
             //console.log('id´s created product: ' +data.id)
-            return 'id´s product: '+data.id
+            return 201
         }catch (error){
             console.log(error)
             return 'addProduct: error'
@@ -40,7 +40,7 @@ class ProductManager{
     }
      getProducts(){
         try{
-            if(this.products.length){
+            if(this.products.length){ 
             return this.products
             }else{
                return  console.log('Not found')
@@ -64,9 +64,6 @@ class ProductManager{
     async updateProduct(id,data) {
         try{       
             let one =  await this.getProductById(id)
-            if(one === 'not found'){
-                return 'Not found'
-            }else{
                 for (let prop in data){
                     //console.log(prop)
                     one[prop] = data[prop]
@@ -74,34 +71,31 @@ class ProductManager{
                 let data_json = JSON.stringify(this.products,null,2)
                 await fs.promises.writeFile(this.path,data_json)
                 //console.log('updated user: '+id)
-                return 'updated user: '+id
-            }
+                return 200
         }catch(error) {
             console.log(error)
-            return 'updateProduct: error'
+            return null
         }
     }
     async deleteProduct(id){
         try{
-            let search = await this.getProductById(id)
-            if(search==='not found'){
-                return 'not found'
-            }else{
+            let search =  this.products.find(each=>each.id===id)
+            if(search){
                 this.products = this.products.filter(each => each.id!==id)
-                //console.log(this.products)
                 let data_json = JSON.stringify(this.products,null,2)
                 await fs.promises.writeFile(this.path,data_json)
-                //console.log('deleteProduct: '+id)
-                return 'deleteProduct: done '+id
+                return 200
+            }else{
+                return null
             }
         }catch(error){
             console.log(error)
-            return 'deleteProduct: error'
+            return null
         }
     }
 }
 
-let manager = new ProductManager('./data/data.json')
+let manager = new ProductManager('./src/data/data.json')
 async function manage(){
     await manager.addProduct({title:'almendras',description: 'frutos secos',price:100,thumbnail: '/almendras.jpg'})
     await manager.addProduct({title:'avellanas',description: 'frutos secos',price:200,thumbnail: '/avellanas.jpg'})
