@@ -20,7 +20,7 @@ class CartManager{
     }
     async addCart({pid,quantity}){
         try{
-            let products = {pid,quantity}
+            let products = [{pid,quantity}]
             let data = {products}
             if(this.carts.length>0){
                 let next_id = this.carts[this.carts.length-1].id+1
