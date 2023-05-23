@@ -1,9 +1,10 @@
 import { Router } from "express";
 import auth_router from "./auth.js";
+import messages_router from "./messages.js";
 
-const router = Router()
+const views_router = Router()
 
-router.get(
+views_router.get(
     '/',
     async (req,res,next) =>{
         try {
@@ -27,10 +28,11 @@ router.get(
     }
 )
 
-router.use('/auth', auth_router)
+views_router.use('/auth', auth_router)
+views_router.use("/chat",messages_router)
 
 
-//router.use('/products', product_router)
-//router.use('/carts'), cart_router)
+//views_router.use('/products', product_router)
+//views_router.use('/carts'), cart_router)
 
-export default router
+export default views_router

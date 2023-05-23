@@ -32,7 +32,7 @@
     "id": 4
   },
   {
-    "title": "ciruelas sin carozo",
+    "title": "ciruela",
     "description": "ciruelas",
     "price": 1500,
     "thumbnail": "/ciruelassincarozo.jpg",
@@ -64,19 +64,10 @@
     "id": 8
   },
   {
-    "title": "banana disecada",
-    "description": "pistacho",
-    "price": 1600,
-    "thumbnail": "/pistacho.jpg",
-    "stock": 50,
-    "id": 9
-  },
-  {
-    "title": "nueces",
-    "description": "frutos secos",
-    "price": 500,
-    "thumbnail": "/nueces.jpg",
-    "stock": 55,
-    "id": 10
+    "title": "cacao",
+    "description": "fruto",
+    "price": 200,
+    "thumbnail": [],
+    "id": 11
   }
 ]

@@ -1,23 +1,11 @@
 [
   {
-    "products": {
-      "pid": 9,
-      "quantity": 9
-    },
-    "id": 1
-  },
-  {
-    "products": {},
-    "id": 3
-  },
-  {
-    "products": {},
-    "id": 4
-  },
-  {
     "products": [
-      {}
+      {
+        "pid": 9,
+        "quantity": 9
+      }
     ],
-    "id": 5
+    "id": 1
   }
 ]
