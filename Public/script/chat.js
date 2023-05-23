@@ -4,7 +4,7 @@ let userName;
 Swal.fire({
     title: "Escribi tu nombre",
     input: "text",
-    inputValidator: value=> !value && 'Por favor escriba su nombre',
+    inputValidator: (value)=> !value && 'Por favor escriba su nombre',
     allowOutsideClick: false,
 }).then((res) => {
     userName= res.value
@@ -28,7 +28,7 @@ function send (e) {
 
 socket.on('allMessagess', data =>{
     document.getElementById('messages').innerHTML = data
-    .map((message) => `<br><b>${message.userName}</b></br>: ${message.message}`)
+    .map((message) => `<br><b>${message.userName}</b>: ${message.message}`)
     .join("")
 
 })

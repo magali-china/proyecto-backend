@@ -13,17 +13,50 @@ views_router.get(
                 {
                     name: 'igna',
                     //last_name: 'borraz',
-                    alumnos: [
-                        {name:'nico', photo: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29uYXxlbnwwfHwwfHw%3D&w=1000&q=80'},
-                        {name:'ale', photo: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29uYXxlbnwwfHwwfHw%3D&w=1000&q=80'},
-                        {name:'flor', photo: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29uYXxlbnwwfHwwfHw%3D&w=1000&q=80'}
+                    productos: [
+                        {name:'Almendras',price:100,photo: './public/img/almendras.jpg' },
+                        {name:'Avellanas',price:200,photo: '/public/img/avellanas.jpg' },
+                        {name:'Castañas de caju',price:300,photo: '/public/img/castañasdecaju.jpg'},
+                        {name:'Almendras chocolate blanco',price:1000,photo: '/public/img/almendraschocolateblanco.jpg' }
                     ],
                     title: 'index',
-                    script: '/public/conection.js'
+                    script: '/public/connection.js'
                 }
             )
         } catch (error) {
             next(error)
+        }
+    }
+)
+
+views_router.get(
+    '/new_product',
+    async(req,res,next) => {
+        try {
+            return res.render(
+                'new_product',
+                {   title: 'new_product',
+                    script: '/public/connection.js',
+                    title: 'Product' }
+            )
+        } catch (error) {
+            next()
+        }
+    }
+)
+
+views_router.get(
+    '/chat',
+    async(req,res,next) => {
+        try {
+            return res.render(
+                'chat',
+                {   title: 'chat',
+                    script: '/public/script/chat.js',
+                    title: 'chat' }
+            )
+        } catch (error) {
+            next()
         }
     }
 )

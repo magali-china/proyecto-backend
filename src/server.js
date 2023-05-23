@@ -20,20 +20,16 @@ socket_server.on(  // es para escuchar
             data => {
                 console.log(data.name)
                 contador++
-                socket_server.emit(  //para todos los clientes, sino socket solo
+                socket.emit(  //para todos los clientes, sino socket solo
                     'contador',
                     {contador}
                 )
             }
         )
-    }
-)
-socket_server.on('connection',(socket)=>{
-        console.log(socket.client.id)
         socket.on('auth',()=>{
             socket_server.emit("allMessagess", chats)
 
-        })
+        });
         socket.on("new_message", data =>{
             chats.push(data)
             console.log(chats)
