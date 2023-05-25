@@ -1,0 +1,32 @@
+<main class="d-flex justify-content-center align-items-center bkg">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 d-flex flex-column">
+                    <h3>Registrar producto</h3>
+                    <form id="product-form" action="/api/products", method="POST">
+                        <fieldset class="mb-2">
+                            <label for="productTitle" class="form-label">Titulo</label>
+                            <input type="text" class="form-control" name="title" id="title" />
+                        </fieldset>
+                        <fieldset class="mb-2">
+                            <label for="productDescription" class="form-label">Descripcion</label>
+                            <input type="text" class="form-control" name="description" id="description" />
+                        </fieldset>
+                        <fieldset class="mb-2">
+                            <label for="productPrice" class="form-label">Precio</label>
+                            <input type="number" class="form-control" name="price" id="price" />
+                        </fieldset>
+                        <fieldset class="mb-2">
+                            <label for="productStock" class="form-label">Stock</label>
+                            <input type="number" class="form-control" name="stock" id="stock" />
+                        </fieldset>
+                        <div class="mb-2">
+                            <label for="productPhoto" class="form-label">Photo</label>
+                            <input type="text" class="form-control" name="thumbnail" id="thumbnail" aria-describedby="photoSource"/>
+                        </div>
+                        <button id='newProduct' type="submit" class="btn btn-danger mt-2">Enviar producto</button>
+                    </form>
+                <div id="productTable" class="col-6"></div>
+            </div>
+        </div>
+</main>
