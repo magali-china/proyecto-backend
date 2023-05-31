@@ -16,5 +16,8 @@ selectors.forEach(each=> each.addEventListener('click',emit_data ))
 
 socket.on(
     'contador',
-    data=> console.log(data)
+    data=> {
+        const contadorSpan = document.getElementById('contador');
+        contadorSpan.innerText = data.contador 
+    }
 )

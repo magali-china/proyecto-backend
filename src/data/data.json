@@ -3,7 +3,7 @@
     "title": "almendras",
     "description": "frutos secos",
     "price": 100,
-    "thumbnail": "/almendras.jpg",
+    "thumbnail": "/public/img/almendras.jpg",
     "stock": 10,
     "id": 1
   },
@@ -11,7 +11,7 @@
     "title": "avellanas",
     "description": "frutos secos",
     "price": 200,
-    "thumbnail": "/avellanas.jpg",
+    "thumbnail": "/public/img/avellanas.jpg",
     "stock": 15,
     "id": 2
   },
@@ -19,7 +19,7 @@
     "title": "castañas de caju",
     "description": "frutos secos",
     "price": 300,
-    "thumbnail": "/castañasdecaju.jpg",
+    "thumbnail": "/public/img/castañasdecaju.jpg",
     "stock": 20,
     "id": 3
   },
@@ -27,47 +27,8 @@
     "title": "almendras chcolate blanco",
     "description": "frutos secos",
     "price": 1000,
-    "thumbnail": "/almendraschocolateblanco.jpg",
+    "thumbnail": "/public/img/almendraschocolateblanco.jpg",
     "stock": 25,
     "id": 4
-  },
-  {
-    "title": "ciruela",
-    "description": "ciruelas",
-    "price": 1500,
-    "thumbnail": "/ciruelassincarozo.jpg",
-    "stock": 30,
-    "id": 5
-  },
-  {
-    "title": "garrapiñada de caju",
-    "description": "garrapiñada",
-    "price": 700,
-    "thumbnail": "/garrapiñadacaju",
-    "stock": 35,
-    "id": 6
-  },
-  {
-    "title": "higo negro",
-    "description": "higo",
-    "price": 1200,
-    "thumbnail": "/higonegro.jpg",
-    "stock": 40,
-    "id": 7
-  },
-  {
-    "title": "kiwi glaceado",
-    "description": "kiwi",
-    "price": 2000,
-    "thumbnail": "/kiwiglaceado.jpg",
-    "stock": 45,
-    "id": 8
-  },
-  {
-    "title": "cacao",
-    "description": "fruto",
-    "price": 200,
-    "thumbnail": [],
-    "id": 11
   }
 ]

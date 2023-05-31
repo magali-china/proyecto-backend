@@ -38,6 +38,12 @@ class ProductManager{
             return 'addProduct: error'
         }
     }
+    read_products() {
+        return this.products;
+      }
+      read_product(id) {
+        return this.products.find((each) => each.id === id);
+      }
     async getProducts(){
         try{
             if(this.products.length){ 

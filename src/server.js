@@ -20,7 +20,7 @@ socket_server.on(  // es para escuchar
             data => {
                 console.log(data.name)
                 contador++
-                socket.emit(  //para todos los clientes, sino socket solo
+                socket_server.emit(  //para todos los clientes, sino socket solo
                     'contador',
                     {contador}
                 )
@@ -37,5 +37,4 @@ socket_server.on(  // es para escuchar
         })
     }
 )
-
 

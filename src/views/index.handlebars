@@ -1,9 +1,5 @@
-<br>
-{{#if last_name}}
-<h2>{{last_name}}</h2>
-{{else}}
+
 <h2 class="text-center">Mis productos</h2>
-{{/if}}
 <br>
 <div class="d-flex justify-content-evenly">
 {{#each productos}}
@@ -12,7 +8,7 @@
             <div class="card-body">
                 <h5 class="card-title">{{this.name}}</h5>
                 <p class="card-text">$ {{this.price}}</p>
-                <span class="emit_data" class="btn btn-primary">Agregar al carrito </span>  
+                <button class="btn btn-primary emit_data">Agregar al carrito </button>  
             </div>
         </div>
 {{/each}}
